@@ -1,0 +1,413 @@
+/*Style HTML*/
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #fffffe;
+}
+
+/*Style "Content"*/
+.content {
+  width: 95%;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Style Everything*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*Style Nav Bar*/
+/*Style All Elements With the Class navBar*/
+.navBar {
+  position: fixed;
+  overflow: hidden;
+  background-color: #bae8e8;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/*Style Nav Bar Links*/
+.navBar a {
+  float: left;
+  display: block;
+  color: #272343;
+  background-color: #bae8e8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*Style Nav Bar Links on Hover*/
+.navBar a:hover {
+  background-color: #bae8e8;
+  color: #272343;
+}
+
+/*Style Active Nav Bar Links*/
+.navBar a.active {
+  background-color: #bae8e8;
+  color: #272343;
+}
+
+/*Style Nav Bar Icon*/
+.navBar .icon {
+  display: none; 
+  background-color: #bae8e8;
+  color: #272343;
+}
+
+/*Style Nav Bar to be Responsive*/
+@media screen and (max-width: 600px) {
+  .navBar a:not(:first-child) {display: none;}
+  .navBar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1275px /*Was 600px*/) {
+  .navBar.responsive {position: sticky;}
+  .navBar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/*Remove Margin Between Nav Bar and First Image*/
+@media screen and (max-width: 1275px /*Was 600px*/) {
+  .navBar {
+    margin-bottom: -45px;
+  }
+  #home {
+    background-color: #bae8e8;
+    color: #001e1d;
+  }
+}
+
+/*Style hoverUnderlineAnimation*/
+.hoverUnderlineAnimation {
+  display: inline-block;
+  position: relative;
+}
+
+.hoverUnderlineAnimation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #272343;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverUnderlineAnimation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+/*Style H1 Text*/
+h1 {
+  color: #272343;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*Style P Text*/
+p {
+  color: #2d334a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Style Links*/
+a {
+  color: #2d334a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.projectLink:hover {
+  background-color: #ffd803;
+  text-decoration: none;
+}
+
+/*Style "Section Header"*/
+.sectionHeader {
+  color: #2d334a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16pt;
+}
+
+/*Style "Centered Section Header"*/
+.centeredSectionHeader {
+  color: #2d334a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16pt;
+  text-align: center;
+}
+
+/*Style iFrame (YouTube Video)*/
+iframe {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+/*Style Lists*/
+ul {
+  color: #2d334a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 20px;
+}
+
+/*Style Buttons*/
+button {
+  background-color: #ffd803;
+  color: #272343;
+  padding: 10px 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 14px;
+}
+
+/*Style Buttons on Hover*/
+button:hover {
+  opacity: 75%;
+  cursor: pointer;
+}
+
+/*Style Image Gallery Container*/
+.galleryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; 
+  flex-wrap: wrap;
+}
+
+/*Style Image Gallery Images*/
+.galleryImage {
+  margin: 20px 10px;
+  height: 200px;
+  width: auto;
+}
+
+/*Style Image Gallery Images on Hover*/
+.galleryImage:hover {
+  -webkit-filter: opacity(75%);
+  filter: opacity(75%);
+}
+
+/*Style "Rounded Image"*/
+.roundedImage {
+  /*Round Image*/
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+
+  /*Center Image*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Style Scroll Div*/
+.scrollDiv {
+  background-color: #bae8e8;
+  border-radius: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/*Style Images in Scroll Div*/
+.scrollDiv img {
+  width: 45%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+/*Style Text in Scroll Div*/
+.scrollDiv p {
+  color: #2d334a;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*Style Side By Side*/
+.sideBySide {
+  margin-right: 3%;
+  margin-left: 3%;
+  width: 90%;
+  height: auto;
+  display: inline-flex;
+  padding: 20px;
+  justify-content: center;
+  margin-top: -1px;
+  align-items: center;
+}
+
+/*Style Side By Side Elements*/
+.sideBySideElement {
+  width: 45%;
+  height: auto;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Style Side By Side to be Responsive*/
+@media screen and (max-width: 850px) {
+  .sideBySide {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .sideBySideElement {
+    width: 100%;
+    margin-left: -2%;
+  }
+}
+
+/*Center Button Group*/
+.centerButtons {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+/*Create Space Between Centered Buttons*/
+.centerButtons button {
+  margin: 5px;
+}
+
+/*Style Embeded Website*/
+.embed {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75%;
+  height: 600px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75%;
+  border: 6px solid #bae8e8;
+  border-radius: 20px;
+}
+
+/*Style Embeded YouTube Video*/
+.sideBySideElement iframe {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 300px;
+}
+
+/*Style "Coding Project" Section*/
+.codingProject {
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Style "Coding Project Image"*/
+.codingProjectImage {
+  width: 15%;
+  height: auto;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Style Project Images*/
+.codingProjectImage img {
+  width: 75%;
+  height: auto;
+}
+
+/*Style Coding Project Info Sections*/
+.codingProjectInfo {
+  width: 85%;
+  height: auto;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Style Projects to Be Responsive*/
+@media screen and (max-width: 1200px) {
+  .codingProjectImage {
+    width: 30%;
+  }
+
+  .codingProjectInfo {
+    width: 70%;
+  }
+
+  .codingProjectImage img {
+    width: 75%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .codingProject {
+    flex-wrap: wrap;
+    flex-direction: columnn;
+  }
+
+  .codingProjectImage, .codingProjectInfo {
+    width: 100%;
+  }
+
+  .codingProjectImage img {
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
