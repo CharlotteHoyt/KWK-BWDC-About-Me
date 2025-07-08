@@ -227,6 +227,14 @@ button:hover {
   filter: opacity(75%);
 }
 
+@media screen and (max-width: 900px) {
+  .galleryImage {
+    margin: 20px 10px;
+    height: 150px;
+    width: auto;
+  }
+}
+
 /*Style "Rounded Image"*/
 .roundedImage {
   /*Round Image*/
